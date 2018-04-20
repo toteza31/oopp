@@ -15,6 +15,7 @@ public class ProJectOop extends ChooseMenu{
         c.ShowMenu();
         c.CHOOSE();
         
+        
          LastTotalPoint+=(want*point);
          LastTotalPrice+=(want*price1);
         
@@ -62,7 +63,8 @@ public class ProJectOop extends ChooseMenu{
     
     public  void Login(){
        int p=0;
-        do {         
+       
+       do {         
             System.out.print("Username: ");
             username = str.nextLine();
          System.out.print("password: ");
@@ -148,7 +150,8 @@ public class ProJectOop extends ChooseMenu{
   }
      
      public void chooseMenuPrint(){  
-        Scanner tote = new Scanner(System.in);
+      
+         Scanner tote = new Scanner(System.in);
         System.out.print("You choose >>> ");
         choose2 = tote.nextInt();
         
@@ -173,9 +176,10 @@ public class ProJectOop extends ChooseMenu{
      }
  
         public void printlast1(){
-            int u = 1;
+           
              total1=want*price1;
              showall[i]="< "+want+" > "+a[i]+(total1) + " Bath";
+             
              System.out.println("--------------------------------");
              System.out.println( showall[i]);
              System.out.println("Point is "+(want*point) + " point");
@@ -345,8 +349,9 @@ public void Knife();
           
           System.out.println(a[i]+" "+price1+" Bath");
           System.out.println("Point is "+point);     
-           super.How();
-           super.printlast1();
+      
+            super.How();
+            super.printlast1();
            
           }    
        public void Pot(){
@@ -395,10 +400,12 @@ class Furniture extends ChooseMenu implements Furniture1 {
         numberneed();
     }
     public void numberneed(){
-         Scanner str = new Scanner(System.in);
+         
+        Scanner str = new Scanner(System.in);
           System.out.print("what number are you need >> ");
             choose1 = str.nextInt();
-          switch(choose1){
+          
+            switch(choose1){
           
               case 1 : Table()         ;break;
               case 2 : Sofa()          ;break;
@@ -478,11 +485,10 @@ class Furniture extends ChooseMenu implements Furniture1 {
    }
 }
 class Bill extends ChooseMenu{
-private int you =10;
+
     public void Sent(){
       Scanner str =new Scanner(System.in);
             
-      total1=want*price1;
          System.out.println("--------------------------------");
          System.out.println("How do you Sent or Get here ? ");
          System.out.println("1.Sent to       ||| +150 bath|||");
@@ -493,6 +499,7 @@ private int you =10;
       
            if(sent == 1){    
             System.out.println(" delivery charge + 150 bath");   
+          
            }else if(sent == 2){ 
                System.out.println(" address");
                System.out.println(" \"PSU\" Prince of Songkla University, Phuket Campus");
@@ -502,6 +509,7 @@ private int you =10;
     
    public void bill(){
        int yy;
+      
        finals s = new finals();
        s.printbill();
      
@@ -513,6 +521,7 @@ private int you =10;
        System.out.println("  Total price >>       "+LastTotalPrice + "\tbath");
        System.out.println("------------------------------------------");
        if(LastTotalPoint>=10){ 
+             
                System.out.println("########## sale 10% ##########");
                System.out.println("  Sale 10% is >>"+tenpersen()+" \tBath");   
                LastTotalPrice-=tenpersen();              
@@ -565,17 +574,20 @@ private int you =10;
    return total2;   
    }
    public int fivepersen(){
-    int total4=0;
+    
+      int total4=0;
            total4=(LastTotalPrice*5)/100;
    return total4;
    }
 }
 abstract class PrintBill extends LOGIN{
-  public void printbill(){
+  
+    public void printbill(){
        System.out.println("====================Bill====================");   
   }
 }
 class finals extends PrintBill{
+  
   public void Login(){}
   public void Title(){}
   public void printbill(){
